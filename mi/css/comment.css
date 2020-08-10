@@ -41,6 +41,7 @@ img {
 
 
 
+
 .side-foot .service-list li {
     float: left;
     width: 19.8%;
@@ -161,7 +162,6 @@ img {
  .foot-link .col-contact .follow .weixin:hover + img {
      display: block;
  }
-
 
 
 
@@ -315,4 +315,67 @@ img {
 .children-list .price {
    color: #ff6700;
    line-height: 20px;
+}
+
+
+.home-bar-xm {
+    left: 50%;
+    right: auto;
+    transform: translateX(613px);
+    bottom: 15%;
+}
+.home-bar-xm a {
+    position: relative;
+    width: 25px;
+    height: 40px;
+}
+.home-bar-xm a .icon {
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+}
+.home-bar-xm a .icon img {
+    width: 20px;
+    height: 20px;
+}
+.home-bar-xm a .text {
+    display: none;
+    position: absolute;
+    left: -85px;
+    top: 20%;
+    width: 59px;
+    height: 28px;
+    line-height: 28px;
+    padding:0 8px ;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+    text-align: center;
+}
+.home-bar-xm a:hover>.text {
+    display: block;
+}
+.home-bar-xm a .text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 35%;
+    right: -3px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #fff;
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 1px -1px 1px  rgba(150, 148, 148, 0.1);
+    transform: rotate(45deg);
+    background: #fff;
+}
+.home-bar-xm .home-bar-first .text {
+    display: none;
+}
+.home-bar-xm .home-bar-last {
+    margin-top: 10px;
+}
+.home-bar-xm .pop-content {
+    top: -22px;
 }

@@ -192,9 +192,26 @@ $(function () {
         }
 
         $('.goback').click(function () {
-            $(window).scrollTop(0)
+            $('html,body').stop().animate({
+                scrollTop: 0
+            })
         })
     })
+
+    // home-bar区域根据用户浏览器宽度改变大小和位置
+    toggleBar();
+    $(window).on('resize', function () {
+        toggleBar();
+    })
+
+    function toggleBar() {
+        var w = $('html').width();
+        if (w <= 1500) {
+            $('.home-bar').addClass('home-bar-xm');
+        } else {
+            $('.home-bar').removeClass('home-bar-xm');
+        }
+    }
 
     // 用户名区域下拉菜单
     $('#user-msg').hover(function () {

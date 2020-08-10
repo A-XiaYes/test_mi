@@ -533,6 +533,10 @@
     }
     ul {
         width: 100%;
+        .active {
+            border: 1px solid @baseColor;
+            z-index: 2;
+        }
         li {
             display: flex;
             position: relative;
@@ -551,6 +555,10 @@
                 float: left;
                 text-align: center;
                 line-height: 36px;
+                .icon-active {
+                    border-color: @baseColor!important;
+                    background: @baseColor;
+                }
                 .icon-fuxuankuanggou {
                     position: relative;
                     top: 0;
@@ -569,10 +577,16 @@
             }
             .box {
                 flex: 1;
+                .current {
+                    color: @baseColor;
+                }
             }
             h3 {
                 font-size: 18px;
                 margin-bottom: 10px;
+                em {
+                    font-style: normal;
+                }
                 span {
                     font-size: 14px;
                     background: @baseColor;
@@ -593,6 +607,10 @@
             }
             .agree {
                 margin-top: 5px;
+                .icon-active {
+                    border-color: @baseColor!important;
+                    background: @baseColor;
+                }
                 .icon-fuxuankuanggou {
                     position: relative;
                     top: 0;

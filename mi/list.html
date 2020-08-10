@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表页</title>
+    <link rel="shortcut icon" href="./mi.ico" />
+    <link rel="stylesheet" href="./css/comment.css">
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./icon-font/iconfont.css">
+    <link rel="stylesheet" href="./font_car-cb/iconfont.css">
+    <link rel="stylesheet" href="./font_list/iconfont.css">
+    <link rel="stylesheet" href="./font_weixin/iconfont.css">
+    <script src="./js/mine.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/list.js"></script>
+</head>
+
+<body class="preload">
+    <div id="app">
+        <!-- 头部区域 -->
+        <div class="header">
+            <div class="site-topbar">
+                <div class="container clearfix">
+                    <ul class="top-nav clearfix top-nav-a">
+                        <li><a href="javascript:;" class="user-msg">小米商城</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">MIUI</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">loT</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">云服务</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">金融</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">有品</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">小爱开放平台</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">企业团购</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">资质证照</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">协议规则</a><span class="sep"> | </span></li>
+                        <li>
+                            <div class="sanjiao"></div>
+                            <a href="javascript:;" class="user-msg">
+                                下载app
+                                <span class="appcode">
+                                    <img src="./images/appcode.png" alt="">
+                                    小米商城app
+                                </span>
+                            </a>
+                            <span class="sep"> | </span>
+                        </li>
+                        <li><a href="javascript:;" class="user-msg">Select Location</a></li>
+                    </ul>
+                    <div class="topbar-car">
+                        <a href="./car.html" class="car-mini">
+                            <span class="iconfont icon-gouwuchekong icon-car"></span>
+                            <span class="car-num">&nbsp;购物车（0）</span>
+                        </a>
+                        <div class="car-menu">
+                            <span>购物车中还没有商品，赶快去选购吧！</span>
+                        </div>
+                    </div>
+
+
+                    <ul class="top-info clearfix top-info-a" id="uname" style="display: none;">
+                        <li class="user-first">
+                            <a href="javascript:;" class="user-msg" id="user-msg">
+                                <span>学人悲喜</span>
+                                <span class="iconfont icon-xiala"></span>
+                            </a>
+                            <ul class="user-menu ">
+                                <li>
+                                    <a href="javascript:;">个人中心</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">评价晒单</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">我的喜欢</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">小米账户</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="logout">退出登录</a>
+                                </li>
+                            </ul>
+                            <span class="sep1"> | </span>
+                        </li>
+                        <li><a href="javascript:;" class="user-msg">消息通知</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">我的订单</a></li>
+                    </ul>
+
+
+
+                    <ul class="top-info clearfix top-info-a" id="unname">
+                        <li>
+                            <a href="./login.html" class="user-msg">登录</a>
+                            <span class="sep"> | </span>
+                        </li>
+                        <li><a href="./register.html" class="user-msg">注册</a><span class="sep"> | </span></li>
+                        <li><a href="javascript:;" class="user-msg">消息通知</a></li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+            <div class="site-header">
+                <div class="container clearfix">
+                    <div class="header-logo">
+                        <!-- <a href="javascript:;">
+                            <span class="iconfont icon-xiaomi icon-font-logo"></span>
+                        </a> -->
+                        <a href="./home.html" title="小米官网" class="logo">
+                            小米官网
+                        </a>
+                    </div>
+                    <ul class="header-nav">
+                        <li class="active"><a href="javascript:;">小米手机</a></li>
+                        <li class="active"><a href="javascript:;">Redmi红米</a></li>
+                        <li class="active"><a href="javascript:;">电视</a></li>
+                        <li class="active"><a href="javascript:;">笔记本</a></li>
+                        <li class="active"><a href="javascript:;">家电</a></li>
+                        <li class="active"><a href="javascript:;">路由器</a></li>
+                        <li class="active"><a href="javascript:;">智能硬件</a></li>
+                        <li><a href="javascript:;">服务</a></li>
+                        <li><a href="javascript:;">社区</a></li>
+                    </ul>
+                    <div class="header-search">
+                        <form action="javascript:;" class="search-from">
+                            <input type="text" placeholder="王源同款" class="btn-text">
+                            <button class="btn-search">
+                                <span class="iconfont icon-sousuo btn-icon-search"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-menu">
+                    <div class="container">
+                        <ul class="children-list">
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-mi10q.webp" alt="">
+                                    </div>
+                                    <div class="title">小米10 青春版 5G</div>
+                                    <p class="price">1899元起</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-mi10p.webp" alt="">
+                                    </div>
+                                    <div class="title">小米10 PRO </div>
+                                    <p class="price">4999元起</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-mi10.webp" alt="">
+                                    </div>
+                                    <div class="title">小米10</div>
+                                    <p class="price">3799元起</p>
+                                </a>
+                            </li>
+                            <li class="last">
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-mixa.webp" alt="">
+                                    </div>
+                                    <div class="title">小米MIX Alpha</div>
+                                    <p class="price">19999元起</p>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                        <ul class="children-list" style="display: none;">
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-redmi.webp" alt="">
+                                    </div>
+                                    <div class="title">Redmi 9A</div>
+                                    <p class="price">599元起</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-redmi10x.webp" alt="">
+                                    </div>
+                                    <div class="title">Redmi 10X</div>
+                                    <p class="price">1599元起</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-redmi10X1.webp" alt="">
+                                    </div>
+                                    <div class="title">Redmi 10X 4G</div>
+                                    <p class="price">999元起</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-redmi9.webp" alt="">
+                                    </div>
+                                    <div class="title">Redmi 9</div>
+                                    <p class="price">799元起</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-redmik30.webp" alt="">
+                                    </div>
+                                    <div class="title">Redmi K30</div>
+                                    <p class="price">1399元起</p>
+                                </a>
+                            </li>
+                            <li class="last">
+                                <a href="javascript:;">
+                                    <div class="thumb">
+                                        <img src="./upload/header-redmik30p.webp" alt="">
+                                    </div>
+                                    <div class="title">Redmi K30 Pro</div>
+                                    <p class="price">2499元起</p>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- breadcrumbs区域 -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="./home.html">首页</a>
+                <span class="sep">></span>
+                <span>所有商品</span>
+            </div>
+        </div>
+
+        <!-- fillter-box区域 -->
+        <div class="fillter-box">
+            <div class="container">
+
+                <div class="fillter-wrap  clearfix">
+                    <div class="list-msg fl">
+                        <span class="classify">分类:</span>
+                    </div>
+                    <ul class="fillter-list fl">
+                        <li class="active">全部</li>
+                        <li><a href="javascript:;">小米平板</a></li>
+                        <li><a href="javascript:;">保护套/贴膜</a></li>
+                        <li><a href="javascript:;">路由器/智能硬件</a></li>
+                        <li><a href="javascript:;">移动电源/插线板</a></li>
+                        <li><a href="javascript:;">电池/储存卡</a></li>
+
+                        <li><a href="javascript:;">工具</a></li>
+                        <li><a href="javascript:;">保障服务</a></li>
+                        <li><a href="javascript:;">第三方平台分类</a></li>
+                        <li><a href="javascript:;">米家扫地机器人</a></li>
+                        <li><a href="javascript:;">生活/箱包</a></li>
+                        <li><a href="javascript:;">家电/插线板</a></li>
+                        <li><a href="javascript:;">小米有品</a></li>
+                        <li><a href="javascript:;">笔记本电脑配件</a></li>
+                        <li><a href="javascript:;">宠物</a></li>
+                        <li><a href="javascript:;">出行/穿戴</a></li>
+                        <li><a href="javascript:;">健康/儿童</a></li>
+                        <li><a href="javascript:;">手机套装</a></li>
+                        <li><a href="javascript:;">VR眼镜</a></li>
+                        <li><a href="javascript:;">笔记本电脑</a></li>
+                        <li><a href="javascript:;">服务</a></li>
+                        <li><a href="javascript:;">小米电视主机</a></li>
+                        <li><a href="javascript:;">低音炮</a></li>
+                        <li><a href="javascript:;">智能家居</a></li>
+                        <li><a href="javascript:;">耳机/音箱</a></li>
+                        <li><a href="javascript:;">线材/支架/储存卡</a></li>
+                        <li><a href="javascript:;">箱包/服饰</a></li>
+                        <li><a href="javascript:;">米兔/生活周边</a></li>
+                        <li><a href="javascript:;">配件优惠套装</a></li>
+                        <li><a href="javascript:;">大家电</a></li>
+                    </ul>
+                    <a href="javascript:;" class="more">
+                        更多
+                        <span class="iconfont icon-xiala"></span>
+                    </a>
+                </div>
+
+                <div class="fillter-wrap  clearfix">
+                    <div class="list-msg fl">
+                        <span class="classify">机型:</span>
+                    </div>
+                    <ul class="fillter-list fl">
+                        <li class="active">全部</li>
+                        <li><a href="javascript:;">Redmi Note 7 Pro</a></li>
+                        <li><a href="javascript:;">黑鲨游戏手机2</a></li>
+                        <li><a href="javascript:;">Redmi7</a></li>
+                        <li><a href="javascript:;">小米9SE</a></li>
+                        <li><a href="javascript:;">小米9</a></li>
+
+                        <li><a href="javascript:;">工具</a></li>
+                        <li><a href="javascript:;">保障服务</a></li>
+                        <li><a href="javascript:;">第三方平台分类</a></li>
+                        <li><a href="javascript:;">米家扫地机器人</a></li>
+                        <li><a href="javascript:;">生活/箱包</a></li>
+                        <li><a href="javascript:;">家电/插线板</a></li>
+                        <li><a href="javascript:;">小米有品</a></li>
+                        <li><a href="javascript:;">笔记本电脑配件</a></li>
+                        <li><a href="javascript:;">宠物</a></li>
+                        <li><a href="javascript:;">出行/穿戴</a></li>
+                        <li><a href="javascript:;">健康/儿童</a></li>
+                        <li><a href="javascript:;">手机套装</a></li>
+                        <li><a href="javascript:;">VR眼镜</a></li>
+                        <li><a href="javascript:;">笔记本电脑</a></li>
+                        <li><a href="javascript:;">服务</a></li>
+                        <li><a href="javascript:;">小米电视主机</a></li>
+                        <li><a href="javascript:;">低音炮</a></li>
+                        <li><a href="javascript:;">智能家居</a></li>
+                        <li><a href="javascript:;">耳机/音箱</a></li>
+                        <li><a href="javascript:;">线材/支架/储存卡</a></li>
+                        <li><a href="javascript:;">箱包/服饰</a></li>
+                        <li><a href="javascript:;">米兔/生活周边</a></li>
+                        <li><a href="javascript:;">配件优惠套装</a></li>
+                        <li><a href="javascript:;">大家电</a></li>
+                    </ul>
+                    <a href="javascript:;" class="more">
+                        更多
+                        <span class="iconfont icon-xiala"></span>
+                    </a>
+                </div>
+
+                <div class="fillter-wrap  clearfix">
+                    <div class="list-msg fl">
+                        <span class="classify">品牌:</span>
+                    </div>
+                    <ul class="fillter-list fl">
+                        <li class="active">全部</li>
+                        <li><a href="javascript:;">小米</a></li>
+                        <li><a href="javascript:;">飞利浦</a></li>
+                        <li><a href="javascript:;">第三方品牌</a></li>
+                        <li><a href="javascript:;">ZMI</a></li>
+                        <li><a href="javascript:;">米家</a></li>
+
+                        <li><a href="javascript:;">工具</a></li>
+                        <li><a href="javascript:;">保障服务</a></li>
+                        <li><a href="javascript:;">第三方平台分类</a></li>
+                        <li><a href="javascript:;">米家扫地机器人</a></li>
+                        <li><a href="javascript:;">生活/箱包</a></li>
+                        <li><a href="javascript:;">家电/插线板</a></li>
+                        <li><a href="javascript:;">小米有品</a></li>
+                        <li><a href="javascript:;">笔记本电脑配件</a></li>
+                        <li><a href="javascript:;">宠物</a></li>
+                        <li><a href="javascript:;">出行/穿戴</a></li>
+                        <li><a href="javascript:;">健康/儿童</a></li>
+                        <li><a href="javascript:;">手机套装</a></li>
+                        <li><a href="javascript:;">VR眼镜</a></li>
+                        <li><a href="javascript:;">笔记本电脑</a></li>
+                        <li><a href="javascript:;">服务</a></li>
+                        <li><a href="javascript:;">小米电视主机</a></li>
+                        <li><a href="javascript:;">低音炮</a></li>
+                        <li><a href="javascript:;">智能家居</a></li>
+                        <li><a href="javascript:;">耳机/音箱</a></li>
+                        <li><a href="javascript:;">线材/支架/储存卡</a></li>
+                        <li><a href="javascript:;">箱包/服饰</a></li>
+                        <li><a href="javascript:;">米兔/生活周边</a></li>
+                        <li><a href="javascript:;">配件优惠套装</a></li>
+                        <li><a href="javascript:;">大家电</a></li>
+                    </ul>
+                    <a href="javascript:;" class="more">
+                        更多
+                        <span class="iconfont icon-xiala"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- content区域 -->
+        <div class="content">
+            <div class="container">
+                <div class="order-list-box clearfix">
+                    <ul class="order-list fl">
+                        <li class="active"><a href="javascript:;">推荐</a></li>
+                        <li><a href="javascript:;">新品</a></li>
+                        <li><a href="javascript:;">价格</a></li>
+                        <li><a href="javascript:;">评论最多</a></li>
+                    </ul>
+                    <ul class="type-list fr">
+                        <li>
+                            <a href="javascript:;">
+                                <span class="checkbox">
+                                    <i class="iconfont icon-fuxuankuanggou"></i>
+                                </span>
+                                查看评价
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span class="checkbox">
+                                    <i class="iconfont icon-fuxuankuanggou"></i>
+                                </span>
+                                仅显示特惠商品
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span class="checkbox">
+                                    <i class="iconfont icon-fuxuankuanggou"></i>
+                                </span>
+                                仅显示有货商品
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="goods-list">
+                    <ul class="clearfix">
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/baochengse.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米小背包</a>
+                            </h2>
+                            <div class="price">
+                                39元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/baochengse.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY">一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/shouhuan.png" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米手环4 NFC版</a>
+                            </h2>
+                            <div class="price">
+                                179元
+                                <del>229</del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/shouhuan.png" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorG">新品上架</div>
+                                <div class="colorR">8折促销</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/guo.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">知吾煮汤锅 米家定制</a>
+                            </h2>
+                            <div class="price">
+                                89元
+                                <del>99元</del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/guo.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorR">9折促销</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/youxiben.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米游戏本15.6”i5 8G 1T+128G 1060 6G</a>
+                            </h2>
+                            <div class="price">
+                                6999元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/youxiben.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <!-- 一件包邮 -->
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/jingshuiqitan.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米净水器滤芯 PP棉</a>
+                            </h2>
+                            <div class="price">
+                                59元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/jingshuiqitan.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <!-- 一件包邮 -->
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/baosky.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米小背包</a>
+                            </h2>
+                            <div class="price">
+                                39元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/baosky.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY">一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/baoyellowgrey.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米净水器滤芯 PP棉</a>
+                            </h2>
+                            <div class="price">
+                                24.9元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/baoyellowgrey.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY">一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/baoskyblue.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米小背包</a>
+                            </h2>
+                            <div class="price">
+                                24.9元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/baoskyblue.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY">一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/xie.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">米家运动鞋4</a>
+                            </h2>
+                            <div class="price">
+                                179元
+                                <del>199</del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/xie.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorR">9折促销</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/baofense.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米小背包</a>
+                            </h2>
+                            <div class="price">
+                                24.9元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/baofense.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY"> 一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/baoyellowgrey.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米小背包</a>
+                            </h2>
+                            <div class="price">
+                                24.9元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/baoyellowgrey.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY"> 一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/zhong.png" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">米家电子温湿度计Pro 3个装</a>
+                            </h2>
+                            <div class="price">
+                                207元
+                                <del>237</del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/zhong.png" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorR">9折促销</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/dingzhi.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">米家定制T恤</a>
+                            </h2>
+                            <div class="price">
+                                149元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/dingzhi.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <!-- <div class="colorY"> 一件包邮</div> -->
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/jinghusiqixin.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米净水器滤芯 后置活性炭</a>
+                            </h2>
+                            <div class="price">
+                                69元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/jinghusiqixin.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <!-- <div class="colorY"> 一件包邮</div> -->
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/jingshuiqi.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米净水器（厨上式）</a>
+                            </h2>
+                            <div class="price">
+                                1449元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/jingshuiqi.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <!-- <div class="colorY"> 一件包邮</div> -->
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/jiancebi.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米水质TDS检测笔</a>
+                            </h2>
+                            <div class="price">
+                                39元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/jiancebi.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <!-- <div class="colorY"> 一件包邮</div> -->
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/baochengse.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米小背包</a>
+                            </h2>
+                            <div class="price">
+                                24.9元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/baochengse.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY"> 一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/xiangbao.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">小米旅行箱 青春款 系列</a>
+                            </h2>
+                            <div class="price">
+                                199~299元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/xiangbao.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./list-upload/xiangbaoheise.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./list-upload/xiangbaofense.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./list-upload/xiangbaobaise.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorY"> 一件包邮</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/Redmi k30 pro.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;"> Redmi K30 Pro 8GB+256GB</a>
+                            </h2>
+                            <div class="price">
+                                2999元
+                                <del></del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/Redmi k30 pro.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./list-upload/Redmi k30 pro zise.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./list-upload/Redmi k30 pro baise.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./list-upload/Redmi k30 pro huise.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <!-- <div class="colorY"></div> -->
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="list-item">
+                            <div class="figure-img">
+                                <a href="javascript:;">
+                                    <img src="./list-upload/chuangdian.jpg" alt="">
+                                </a>
+                            </div>
+                            <h2 class="title">
+                                <a href="javascript:;">8H乳胶床垫2</a>
+                            </h2>
+                            <div class="price">
+                                899元
+                                <del>999元</del>
+                            </div>
+                            <ul class="thumbs-list clearfix">
+                                <li>
+                                    <img src="./list-upload/chuangdian.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="flags">
+                                <div class="colorR"> 9折促销</div>
+                            </div>
+                            <div class="actions">
+                                <a href="javascript:;" class="like">
+                                    <i class="iconfont icon-xin"></i>
+                                    <span>喜欢</span>
+                                </a>
+                                <a href="javascript:;" class="detail">
+                                    <span>查看详情</span>
+                                    <i class="iconfont icon-gouwuche"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <!-- 分页区域 -->
+
+                </div>
+            </div>
+
+            <!--carousel  -->
+            <div class="carousel-box">
+                <div class="container">
+                    <fieldset>
+                        <legend align="center">猜你喜欢</legend>
+                    </fieldset>
+                    <div class="carousel">
+                        <ul class="recommend-list clearfix">
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/dianchi.jpg" alt="">
+                                    <div class="recommend-name">彩虹7号电池（10粒装）</div>
+                                    <div class="recommend-price">9.9元</div>
+                                    <div class="recommend-tips">13.8万人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/qianzibi.jpg" alt="">
+                                    <div class="recommend-name">米家金属签字笔</div>
+                                    <div class="recommend-price">24.9元</div>
+                                    <div class="recommend-tips">3万人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/miyashua.jpg" alt="">
+                                    <div class="recommend-name">米家电动牙刷头（通用型）</div>
+                                    <div class="recommend-price">9.9元</div>
+                                    <!-- <div class="recommend-tips">13.8万人好评</div> -->
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/yidongdianyuan.jpg" alt="">
+                                    <div class="recommend-name">小米移动电源3 10000mAh USB-C双向快充版</div>
+                                    <div class="recommend-price">99元</div>
+                                    <div class="recommend-tips">4255人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/yagao.jpg" alt="">
+                                    <div class="recommend-name">贝医生0+防蛀健齿牙膏</div>
+                                    <div class="recommend-price">12.9元</div>
+                                    <div class="recommend-tips">5263人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/shexiangtou.jpg" alt="">
+                                    <div class="recommend-name">小米智能摄像机云台版</div>
+                                    <div class="recommend-price">189元</div>
+                                    <div class="recommend-tips">2.8万人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/chaxianban.jpg" alt="">
+                                    <div class="recommend-name">小米插线板（含3口USB 2A快充）</div>
+                                    <div class="recommend-price">49元</div>
+                                    <div class="recommend-tips">1.6万人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/yidongdianyuan.jpg" alt="">
+                                    <div class="recommend-name">小米移动电源3 10000mAh USB-C双向快充版</div>
+                                    <div class="recommend-price">99元</div>
+                                    <div class="recommend-tips">4255人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/dianchi.jpg" alt="">
+                                    <div class="recommend-name">彩虹7号电池（10粒装）</div>
+                                    <div class="recommend-price">9.9元</div>
+                                    <div class="recommend-tips">13.8万人好评</div>
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+                            <li class="recommend-item">
+                                <a href="#">
+                                    <img src="./carimg/miyashua.jpg" alt="">
+                                    <div class="recommend-name">米家电动牙刷头（通用型）</div>
+                                    <div class="recommend-price">9.9元</div>
+                                    <!-- <div class="recommend-tips">13.8万人好评</div> -->
+                                </a>
+                                <div class="recommend-action">
+                                    <a href="#" class="btn">加入购物车</a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <ul class="pagers">
+                            <li class="pager"><span class="active"></span></li>
+                            <li class="pager"><span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 脚部模块 -->
+        <div class="side-foot">
+            <div class="container">
+                <div class="foot-service">
+                    <ul class="service-list clearfix">
+                        <li>
+                            <span class="iconfont icon-banshou foot-icon"></span>
+                            <a href="#">预约维修服务</a>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-7 foot-icon"></span>
+                            <a href="#">7天无理由退换</a>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-15tianwuliyoutuihuo foot-icon"></span>
+                            <a href="#">15天免费换货</a>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-liwu foot-icon"></span>
+                            <a href="#">满99包邮</a>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-weizhi foot-icon"></span>
+                            <a href="#">520余家售后网点</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot-link clearfix">
+                    <dl class="col-link">
+                        <dt>帮助中心</dt>
+                        <dd><a href="#">账户管理</a></dd>
+                        <dd><a href="">购物指南</a></dd>
+                        <dd><a href="#">订单操作</a></dd>
+                    </dl>
+                    <dl class="col-link">
+                        <dt>服务支持</dt>
+                        <dd><a href="#">售后政策</a></dd>
+                        <dd><a href="">自助服务</a></dd>
+                        <dd><a href="#">相关下载</a></dd>
+                    </dl>
+                    <dl class="col-link">
+                        <dt>线下门店</dt>
+                        <dd><a href="#">小米之家</a></dd>
+                        <dd><a href="">服务网点</a></dd>
+                        <dd><a href="#">授权体验店</a></dd>
+                    </dl>
+                    <dl class="col-link">
+                        <dt>关于小米</dt>
+                        <dd><a href="#">了解小米</a></dd>
+                        <dd><a href="">加入小米</a></dd>
+                        <dd><a href="#">投资者关系</a></dd>
+                        <dd><a href="#">企业社会责任</a></dd>
+                        <dd><a href="#">廉洁举报</a></dd>
+                    </dl>
+                    <dl class="col-link">
+                        <dt>关注我们</dt>
+                        <dd><a href="#">新浪微博</a></dd>
+                        <dd><a href="">官方微信</a></dd>
+                        <dd><a href="#">联系我们</a></dd>
+                        <dd><a href="#">公益基金会</a></dd>
+                    </dl>
+                    <dl class="col-link">
+                        <dt>特色服务</dt>
+                        <dd><a href="#">F码通道</a></dd>
+                        <dd><a href="">礼物码</a></dd>
+                        <dd><a href="#">防伪查询</a></dd>
+                    </dl>
+                    <div class="col-contact">
+                        <p class="phone">400-100-5678</p>
+                        <p class="time">8:00-18:00（仅收市话费）</p>
+                        <a href="#" class="btn-line">
+                            <span class="iconfont icon-message"></span>
+                            人工服务
+                        </a>
+                        <div class="follow">
+                            关注小米：
+                            <a href="#"><span class="iconfont icon-weibo"></span></a>
+                            <a href="#" class=" weixin"><span class="iconfont icon-weixin"></span></a>
+                            <img src="./images/wx-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 侧边信息栏 -->
+        <div class="home-bar">
+            <a href="#" class="home-bar-first">
+                <div class="icon">
+                    <img src="./images/shouji.png" alt="" class="staic">
+                    <img src="./images/shouji2.png" alt="" class="hover">
+                </div>
+                <span class="text">手机APP</span>
+                <div class="pop-content">
+                    <img src="./images/pop.png" alt="">
+                    <span class="desc">
+                        扫码领取新人百元礼包
+                    </span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <img src="./images/ren2.png" alt="" class="staic">
+                    <img src="./images/ren.png" alt="" class="hover">
+                </div>
+                <span class="text">个人中心</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <img src="./images/weixiu2.png" alt="" class="staic">
+                    <img src="./images/weixiu.png" alt="" class="hover">
+                </div>
+                <span class="text">售后服务</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <img src="./images/erji2.png" alt="" class="staic">
+                    <img src="./images/erji.png" alt="" class="hover">
+                </div>
+                <span class="text">人工服务</span>
+            </a>
+            <a href="./car.html">
+                <div class="icon">
+                    <img src="./images/gouwu2.png" alt="" class="staic">
+                    <img src="./images/gouwu.png" alt="" class="hover">
+                </div>
+                <span class="text">购物车</span>
+            </a>
+            <a href="javascript:;" class="home-bar-last goback">
+                <div class="icon">
+                    <img src="./images/top2.png" alt="" class="staic">
+                    <img src="./images/top.png" alt="" class="hover">
+                </div>
+                <span class="text">回顶部</span>
+            </a>
+        </div>
+
+        <!-- 侧边信息栏 当用户宽度较小时出现 -->
+        <!-- <div class="home-bar-xm">
+            <a href="#">
+                <div class="icon">
+                    <img src="./images/shouji.png" alt="" class="staic">
+                    <img src="./images/shouji2.png" alt="" class="hover">
+                </div>
+            </a>
+        </div> -->
+
+    </div>
+</body>
+<script>
+    $(window).on('load', function () {
+        $("body").removeClass("preload");
+    });
+</script>
+
+</html>

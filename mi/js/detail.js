@@ -62,9 +62,26 @@ $(function () {
         }
 
         $('.goback').click(function () {
-            $(window).scrollTop(0)
+            $('html,body').stop().animate({
+                scrollTop: 0
+            })
         })
     })
+
+    // home-bar区域根据用户浏览器宽度改变大小和位置
+    toggleBar();
+    $(window).on('resize', function () {
+        toggleBar();
+    })
+
+    function toggleBar() {
+        var w = $('html').width();
+        if (w <= 1500) {
+            $('.home-bar').addClass('home-bar-xm');
+        } else {
+            $('.home-bar').removeClass('home-bar-xm');
+        }
+    }
 
     // 用户名区域下拉菜单
     $('#user-msg').hover(function () {
@@ -159,6 +176,70 @@ $(function () {
 
 
     new Enlarge('.enlarge')
+
+
+    // 商品选择结算模块
+    getMsg();
+    $('.buy-option li').on('click', function () {
+        // $(this).toggleClass('active');
+        $(this).addClass('active').siblings().removeClass('active');
+        getMsg();
+    })
+
+    $('.service-box li').on('click', function () {
+        $(this).toggleClass('active');
+        // console.log($(this).children('.box'))
+        $(this).children('.box').children('h3').toggleClass('current');
+        $(this).children('.checkbox').children('.icon-fuxuankuanggou').toggleClass('icon-active');
+        $(this).children('.box').children('.agree').children('.icon-fuxuankuanggou').toggleClass('icon-active');
+        if ($(this).siblings('li').hasClass('active')) {
+            $(this).siblings('li').removeClass('active');
+            $(this).siblings('li').children('.box').children('h3').removeClass('current');
+            $(this).siblings('li').children('.checkbox').children('.icon-fuxuankuanggou').removeClass('icon-active');
+            $(this).siblings('li').children('.box').children('.agree').children('.icon-fuxuankuanggou').removeClass('icon-active');
+        }
+        getServiceMsg();
+
+    })
+
+
+
+    // 选择列表模块
+    // 商品信息模块
+    function getMsg() {
+        $('.serviceMsg').empty();
+        var msg = $('.buy-option .active').text();
+        // console.log(msg)
+        var li = `<li class="item-info">${msg}<span>2999元</span></li>`;
+        var ul = document.querySelector('.serviceMsg');
+        ul.insertAdjacentHTML('beforeend', li);
+    }
+    // 服务信息模块
+    // function Trim(str, is_global) {
+    //     var result;
+    //     result = str.replace(/(^\s+)|(\s+$)/g, "");
+    //     if (is_global.toLowerCase() == "g") {
+    //         result = result.replace(/\s/g, "");
+    //     }
+    //     return result;
+    // }
+    function getServiceMsg() {
+        $('.priceMsg').empty();
+        var price = parseInt($('.price-info').text());
+
+        $('.service-box ul>.active').each(function (i, ele) {
+            var serviceMsg = $(ele).children('.box').children('h3').children('em').text();
+            var priceMsg = $(ele).children('.box').children('h3').children('span').text();
+            // console.log(priceMsg)
+            var li = `<li class="item-info">${serviceMsg}<span>${priceMsg}</span></li>`;
+            var ul = document.querySelector('.priceMsg');
+            ul.insertAdjacentHTML('beforeend', li);
+            // 计算所选列表价钱总和
+            price += parseInt(priceMsg);
+        })
+        $('.total-price').text('总计：' + price + '元');
+    }
+
 
 })
 

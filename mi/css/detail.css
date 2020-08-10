@@ -523,6 +523,10 @@
 .service-option .service-box ul {
   width: 100%;
 }
+.service-option .service-box ul .active {
+  border: 1px solid #ff6700;
+  z-index: 2;
+}
 .service-option .service-box ul li {
   display: flex;
   position: relative;
@@ -543,6 +547,10 @@
   text-align: center;
   line-height: 36px;
 }
+.service-option .service-box ul li i .icon-active {
+  border-color: #ff6700 !important;
+  background: #ff6700;
+}
 .service-option .service-box ul li i .icon-fuxuankuanggou {
   position: relative;
   top: 0;
@@ -561,9 +569,15 @@
 .service-option .service-box ul li .box {
   flex: 1;
 }
+.service-option .service-box ul li .box .current {
+  color: #ff6700;
+}
 .service-option .service-box ul li h3 {
   font-size: 18px;
   margin-bottom: 10px;
+}
+.service-option .service-box ul li h3 em {
+  font-style: normal;
 }
 .service-option .service-box ul li h3 span {
   font-size: 14px;
@@ -584,6 +598,10 @@
 }
 .service-option .service-box ul li .agree {
   margin-top: 5px;
+}
+.service-option .service-box ul li .agree .icon-active {
+  border-color: #ff6700 !important;
+  background: #ff6700;
 }
 .service-option .service-box ul li .agree .icon-fuxuankuanggou {
   position: relative;
