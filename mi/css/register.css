@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body,html {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    background: #f5f5f5;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+.t-c {
+    text-align: center;
+}
+.wrapper {
+    width: 840px;
+    /* height: 900px; */
+    margin: 100px auto;
+}
+.layout {
+    width: 100%;
+    padding: 0px 30px 30px;
+    background: #fff;
+}
+.layout-logo {
+    padding-bottom: 40px;
+}
+.milogo {
+    display: block;
+    width: 49px;
+    height: 48px;
+    margin: auto;
+    cursor: default;
+    background: url(https://account.xiaomi.com/static/res/349d9c1/account-static/respassport/acc-2014/img/milogo.png);
+}
+.layout-title .title {
+    font-weight: normal;
+    font-size: 30px;
+    color: #333;
+}
+.regbox {
+    width: 660px;
+    margin: auto;
+    padding-left: 230px;
+}
+.regbox .regbox-input {
+    margin: 20px 0;
+}
+.hint {
+    margin-left: 10px;
+    font-size: 12px;
+}
+.wrong {
+    color: red;
+    padding-left: 18px;
+    background: url(../images/wrong.png) no-repeat left center;
+}
+.right {
+    padding-left: 18px;
+    background: url(../images/right.png)no-repeat left center;
+}
+.regbox label {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+}
+.regbox .list-input {
+    height: 40px;
+    width: 300px;
+    padding-left: 15px;
+    background: #fff;
+    outline: none;
+    border: 0;
+    border: 1px solid #999;
+}
+.regbox-btn {
+    position: relative;
+    width: 460px;
+    margin: 40px auto 50px;
+}
+.regbox-btn input {
+    border: 0;
+    outline: none;
+    background: #ff6700;
+    width: 330px;
+    height: 42px;
+    cursor: pointer;
+    color: #fff;
+}
+.regbox-btn input:hover {
+    opacity: .8;
+}
+.layout .msg {
+    padding-top: 30px;
+    color: #9d9d9d;
+}
+.msg .select-privacy {
+    cursor: pointer;
+}
+.msg .select-privacy a {
+    color: #333;
+    font-weight: bold;
+}
+.footer {
+    width: 900px;
+}
+.lang-select {
+    display: inline-block;
+}
+.lang-select li {
+    float: left;
+}
+.lang-select li a {
+    display: inline-block;
+    padding: 0 10px;
+   color: #757575;
+}
+.lang-select .current {
+    color: #333;
+}
+.footer {
+    margin-top: 100px;
+}
+.footer-info {
+    margin-top: 10px;
+}
+.footer-info a {
+    color: #666;
+}
+
+
